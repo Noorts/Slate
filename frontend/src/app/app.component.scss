@@ -1,0 +1,27 @@
+.site-wrapper {
+    display: flex;
+    justify-content: center;
+    background: #F4F6F8;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.content-container {
+    width: 800px;
+    background: none;
+    height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .content-container{
+        width: 800px;
+        background: none;
+    }
+}

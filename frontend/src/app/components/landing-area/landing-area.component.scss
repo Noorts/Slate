@@ -1,0 +1,46 @@
+.home-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.landing-area-container {
+    text-align: center;
+    height: calc(100vh - 60px); /* Viewport height minus the height of the header. */
+
+    border-bottom: 1px solid black;
+
+    &:before {
+        content: '\200B';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em; /* Adjusts for spacing. */
+    }
+
+    .landing-area-container-centered {
+        width: 400px;
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+}
+
+.arrow-container {
+    margin-top: 10vh;
+    text-align: center;
+
+    .down-arrow {
+        border: solid black;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+// @media only screen and (min-width: 768px) {
+//     .home-title {
+//         font-size: 40px;
+//     }
+// }
