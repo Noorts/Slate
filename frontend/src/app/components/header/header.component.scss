@@ -35,8 +35,19 @@ $header-height: 60px;
     align-items: center;
 }
 
-.header-logo {
-    width: 22px;
+.header-logo-container {
+    height: 100%;
+    vertical-align: middle;
 
-    padding: 0px 10px;
+    .header-logo-helper {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .header-logo {
+        vertical-align: middle;
+        padding: 0px 10px;
+        width: 22px;
+    }
 }
