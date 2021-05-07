@@ -1,16 +1,9 @@
 <div class="info-card">
     <div class="info-card-status">
-        <span class="info-card-status-content">Card Status</span>
+        <span class="info-card-status-content">{{ model.statusContent }}</span>
     </div>
-    <span class="info-card-item info-card-header">Card Header</span>
-    <span class="info-card-item info-card-org">Card Organization</span>
-    <span class="info-card-item info-card-date">2020 - 2020</span>
-    <span class="info-card-item info-card-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse commodo massa ligula, at rhoncus lectus fringilla eu.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse commodo massa ligula, at rhoncus lectus fringilla eu.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse commodo massa ligula, at rhoncus lectus fringilla eu.
-    </span>
+    <span class="info-card-item info-card-header">{{ model.header }}</span>
+    <span class="info-card-item info-card-org">{{ model.organisation }}</span>
+    <span class="info-card-item info-card-date">{{ model.dateRange }}</span>
+    <span class="info-card-item info-card-description">{{ model.description }}</span>
 </div>

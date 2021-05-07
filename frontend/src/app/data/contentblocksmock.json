@@ -1,0 +1,40 @@
+[
+    {
+        "blockHeader": "Experience",
+        "infoCards": [
+            {
+                "statusContent": "Content 1",
+                "header": "Header 1",
+                "organisation": "Org 1",
+                "dateRange": "2020 - 2020",
+                "description": "Description 1"
+            },
+            {
+                "statusContent": "Content 2",
+                "header": "Header 2",
+                "organisation": "Org 2",
+                "dateRange": "2020 - 2020",
+                "description": "Description 2"
+            }
+        ]
+    },
+    {
+        "blockHeader": "Education",
+        "infoCards": [
+            {
+                "statusContent": "Content 3",
+                "header": "Header 3",
+                "organisation": "Org 3",
+                "dateRange": "2020 - 2020",
+                "description": "Description 3"
+            },
+            {
+                "statusContent": "Content 4",
+                "header": "Header 4",
+                "organisation": "Org 4",
+                "dateRange": "2020 - 2020",
+                "description": "Description 4"
+            }
+        ]
+    }
+]

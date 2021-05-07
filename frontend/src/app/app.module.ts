@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LandingAreaComponent } from './components/landing-area/landing-area.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { ContentBlockComponent } from './components/content-block/content-block.component';
+import { ContentBlocksService, ContentBlocksServiceMock } from '@services/content-blocks.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ContentBlockComponent } from './components/content-block/content-block.
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{ provide: ContentBlocksService, useClass: ContentBlocksServiceMock }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
