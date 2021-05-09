@@ -1,5 +1,5 @@
 <div class="info-card">
-    <div class="info-card-status">
+    <div class="info-card-status" *ngIf="model.statusContent">
         <span class="info-card-status-content">{{ model.statusContent }}</span>
     </div>
     <span class="info-card-item info-card-header">{{ model.header }}</span>
