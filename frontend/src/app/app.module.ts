@@ -11,6 +11,7 @@ import { LandingAreaComponent } from './components/landing-area/landing-area.com
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { ContentBlockComponent } from './components/content-block/content-block.component';
 import { ContentBlocksService, ContentBlocksServiceMock } from '@services/content-blocks.service';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContentBlocksService, ContentBlocksServiceMock } from '@services/conten
     HeaderComponent,
     LandingAreaComponent,
     InfoCardComponent,
-    ContentBlockComponent
+    ContentBlockComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,14 @@
-import { InfoCard } from './InfoCard';
+import { Card } from './Card';
 
 class ContentBlock {
     public blockHeader: string;
-    public infoCards: InfoCard[];
+    public contentType: string;
+    public cards: Card[];
 
-    constructor(blockHeader: string = '', infoCards: InfoCard[] = []) {
+    constructor(blockHeader: string = '', contentType: string = '', cards: Card[] = []) {
         this.blockHeader = blockHeader;
-        this.infoCards = infoCards;
+        this.contentType = contentType;
+        this.cards = cards;
     }
 }
 

@@ -1,8 +1,9 @@
 <a id="{{ model.blockHeader }}" class="nav-anchor">&nbsp;</a>
 <div class="content-block-container">
     <h1 class="content-block-title">{{ model.blockHeader }}</h1>
-    <div *ngFor="let infocard of model.infoCards; index as i">
-        <app-info-card [model]="infocard" ></app-info-card>
-        <div class="vertical-line" *ngIf="i != model.infoCards.length - 1"></div>
+    <div *ngFor="let card of model.cards; index as i">
+        <app-info-card *ngIf="model.contentType === 'info-card'" [model]="card" ></app-info-card>
+        <app-project-card *ngIf="model.contentType === 'project-card'" [model]="card" ></app-project-card>
+        <div class="vertical-line" *ngIf="i != model.cards.length - 1"></div>
     </div>
 </div>

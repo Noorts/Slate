@@ -1,0 +1,12 @@
+<div class="project-card">
+    <div class="project-card-info-container">
+        <a class="" [href]="model.sourceUrl" alt="Project Source Image" target="_blank" rel="noopener noreferrer">
+            <img class="project-card-info-source-image" [src]="model.sourceImageUrl">
+        </a>
+    </div>
+    <div class="project-card-header-container">
+        <img class="project-card-item project-card-image" [src]="model.projectImageUrl">
+        <span class="project-card-item project-card-header">{{ model.header }}</span>
+    </div>
+    <span class="project-card-item project-card-description">{{ model.description }}</span>
+</div>

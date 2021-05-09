@@ -1,4 +1,6 @@
-class InfoCard {
+import { Card } from './Card';
+
+class InfoCard implements Card {
     public statusContent: string;
     public header: string;
     public organisation: string;

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { InfoCard } from 'src/app/models/InfoCard';
+import { ProjectCard } from '@models/ProjectCard';
 import { ContentBlock } from 'src/app/models/ContentBlock';
 import mockData from 'src/app/data/contentblocksmock.json';
 import { Observable } from 'rxjs';
+import { Card } from '@models/Card';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +29,15 @@ class ContentBlocksServiceMock extends ContentBlocksService {
 
   load(): void {
     for (const contentblock of mockData) {
-      const listOfInfoCards = [];
-      for (const infoCard of contentblock.infoCards) {
-        listOfInfoCards.push(Object.assign(new InfoCard(), infoCard));
+      const listOfInfoCards: Card[] = [];
+      const contentType = contentblock.contentType;
+
+      for (const currentCard of contentblock.cards) {
+        const curObj = Object.assign(contentType === 'info-card' ? new InfoCard() : new ProjectCard(), currentCard);
+        listOfInfoCards.push(curObj);
       }
       this.data.push(Object.assign(new ContentBlock(), {
-        blockHeader: contentblock.blockHeader, infoCards: listOfInfoCards
+        blockHeader: contentblock.blockHeader, contentType: contentblock.contentType, cards: listOfInfoCards
       }));
     }
   }
