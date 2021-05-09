@@ -11,6 +11,7 @@ $header-height: 60px;
 
 .header-item {
     position: relative;
+    text-decoration: none;
 
     &.active:before{
         content: "";
