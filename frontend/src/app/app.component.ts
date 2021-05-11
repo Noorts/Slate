@@ -41,13 +41,10 @@ class AppComponent implements OnInit {
    * The class names of the header items are manipulated to set the appropriate styling.
    */
   public refreshActiveHeaderItem(): void {
-    const headerElements = document.getElementsByClassName('header-item');
     const elements = document.getElementsByClassName('nav-anchor');
 
     /* A number that indicates the current page depth. */
-    const currentPageDepth = headerElements !== null
-      ? ((headerElements[0] as HTMLElement).offsetParent as HTMLElement).offsetTop : 0;
-
+    const currentPageDepth = document.querySelector('.site-wrapper').scrollTop;
 
     /* Determine which anchor is the last one that has been scrolled past.
      * We do this because we want to set the active header item to the item that is currently being viewed. */

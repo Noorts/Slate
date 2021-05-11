@@ -1,9 +1,9 @@
 .header {
-    position: sticky; /* Make it stick to the top of the window. */
-    top: 0px;
+    position: fixed;
+    top: 0;
     z-index: 1;
 
-    width: 114%;
+    width: 800px;
 
     display: flex;
 

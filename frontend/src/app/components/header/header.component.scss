@@ -29,7 +29,9 @@ $header-height: 60px;
 .header-offset-container {
     height: $header-height;
 
-    margin-left: 30px;
+    right: -140px;
+
+    position: absolute;
 
     display: flex;
     justify-content: space-evenly;

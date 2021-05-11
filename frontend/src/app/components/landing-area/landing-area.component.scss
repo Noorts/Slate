@@ -5,7 +5,7 @@
 
 .landing-area-container {
     text-align: center;
-    height: calc(100vh - 60px); /* Viewport height minus the height of the header. */
+    height: 100vh; /* Viewport height, the header is now fixed. */
 
     border-bottom: 1px solid black;
 
