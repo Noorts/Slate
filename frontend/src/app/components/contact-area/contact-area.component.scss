@@ -1,0 +1,68 @@
+.contact-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact-area-container {
+    margin-top: 48px;
+    text-align: center;
+    height: 40vh; /* Viewport height, the header is now fixed. */
+
+    &:before {
+        content: '\200B';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em; /* Adjusts for spacing. */
+    }
+
+    .contact-area-container-centered {
+        width: 100%;
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+}
+
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-button {
+    &.first {
+        margin-right: 24px;
+    }
+
+    position: relative;
+
+    width: 220px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 1px solid black;
+}
+
+.contact-button-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.contact-button-img {
+    width: 34px;
+}
+
+.contact-button-text {
+    width: 70%;
+}
