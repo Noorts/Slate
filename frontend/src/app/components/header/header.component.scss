@@ -18,11 +18,24 @@ $header-height: 60px;
         position: absolute;
         width: 6px;
         height: 6px;
-        top: 26px;
+        top: 28px;
         left:calc(50% - 3px);
 
         border-radius: 100%;
         background: black;
+    }
+
+    &:hover:before{
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 28px;
+        left:calc(50% - 3px);
+
+        border-radius: 100%;
+        background: black;
+        z-index: 1;
     }
 }
 
@@ -51,6 +64,6 @@ $header-height: 60px;
     .header-logo {
         vertical-align: middle;
         padding: 0px 10px;
-        width: 22px;
+        width: 24px;
     }
 }
