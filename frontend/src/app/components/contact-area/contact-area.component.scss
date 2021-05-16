@@ -25,6 +25,8 @@
 }
 
 .contact-button-container {
+    margin-top: 32px;
+
     display: flex;
     justify-content: center;
 }
@@ -36,7 +38,7 @@
 
     position: relative;
 
-    width: 220px;
+    width: 240px;
     height: 60px;
 
     display: flex;
@@ -60,7 +62,7 @@
 }
 
 .contact-button-img {
-    width: 34px;
+    width: 36px;
 }
 
 .contact-button-text {

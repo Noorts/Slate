@@ -54,7 +54,7 @@ class AppComponent implements OnInit {
 
       /* Check if we passed this anchor and then set the lastAnchorIndex to that anchor.
        * The + 1 was added to compensate for the difference between page depth and anchor height. */
-      if (currentPageDepth + 1 >= currentAnchorHeight) {
+      if (currentPageDepth + (window.innerHeight / 3) >= currentAnchorHeight) { // TODO 200 should be dynamic by page height?
         lastAnchorIndex = i;
       }
     }
@@ -64,13 +64,13 @@ class AppComponent implements OnInit {
     /* Remove the active status from a header item if it is no longer the currently active item. */
     const selectedElements = document.getElementsByClassName('active');
     if (selectedElements.length === 1 && selectedElements[0].id !== idOfNewActiveHeaderItem) {
-      selectedElements[0].className = 'header-item';
+      selectedElements[0].className = 'header-item text-small-base';
     }
 
     /* Set the new header item to active. Note: even if the item is already active the className will still be set. */
     const headerItem = document.getElementById(idOfNewActiveHeaderItem);
     if (headerItem) {
-      headerItem.className = 'header-item active';
+      headerItem.className = 'header-item text-small-base active';
     }
   }
 }

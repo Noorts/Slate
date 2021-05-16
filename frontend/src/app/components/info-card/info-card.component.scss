@@ -1,10 +1,10 @@
 .info-card {
-    max-width: 560px;
+    max-width: 600px;
     min-height: 220px;
 
     // overflow-y: hidden; // Enable this when the expand button has been implemented.
 
-    padding: 20px 25px;
+    padding: 18px 25px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
 .info-card-status-content {
     vertical-align: middle;
 
-    font-size: 0.938em;
+    font-size: 1em;
 }
 
 .info-card-header {
@@ -47,15 +47,7 @@
     font-weight: 600;
 }
 
-.info-card-org {
-    font-size: 1em;
-    font-weight: 400;
-}
-
 .info-card-date {
-    font-size: 1em;
-    font-weight: 400;
-
     color: #717171;
 }
 
