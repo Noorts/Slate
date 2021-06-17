@@ -32,6 +32,11 @@
 }
 
 .contact-button {
+    &:hover {
+        color: white;
+        background-color: grey;
+    }
+
     &.first {
         margin-right: 24px;
     }
