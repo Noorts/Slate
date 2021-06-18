@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content-blocks",
+  "info": {
+    "name": "contentBlock",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blockHeader": {
+      "type": "string",
+      "required": true
+    },
+    "contentType": {
+      "type": "string",
+      "required": true
+    },
+    "infoCards": {
+      "via": "infoContent",
+      "collection": "info-card"
+    },
+    "projectCards": {
+      "via": "infoContent",
+      "collection": "project-card"
+    }
+  }
+}

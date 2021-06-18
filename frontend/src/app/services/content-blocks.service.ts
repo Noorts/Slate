@@ -4,7 +4,9 @@ import { ProjectCard } from '@models/ProjectCard';
 import { ContentBlock } from 'src/app/models/ContentBlock';
 import mockData from 'src/app/data/contentblocksmock.json';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Card } from '@models/Card';
+import { environment } from '@env/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +14,9 @@ import { Card } from '@models/Card';
 class ContentBlocksService {
   public data: ContentBlock[] = [];
 
-  constructor() { } /* Hook this up to a database later on. */
-
-  getAllActivities(): Observable<ContentBlock[]> {
-    return null; /* Retrieve data from the database here. */
-  }
-}
-
-@Injectable()
-class ContentBlocksServiceMock extends ContentBlocksService {
-
-  constructor() {
-    super();
+  constructor(private httpClient: HttpClient) {
     this.load();
-  }
+  } /* Hook this up to a database later on. */
 
   load(): void {
     for (const contentblock of mockData) {
@@ -48,6 +39,21 @@ class ContentBlocksServiceMock extends ContentBlocksService {
     });
   }
 
+  private _httpGetContentBlocks(): Observable<any> {
+    return this.httpClient.get<any>(`${environment.strapiApiUrl}/content-blocks`);
+  }
+
+  getAllContentBlocks(): Observable<any> {
+    return this._httpGetContentBlocks();
+  }
+
+  private _httpGetLandingAreaInfo(): Observable<any> {
+    return this.httpClient.get<any>(`${environment.strapiApiUrl}/landing-area`);
+  }
+
+  getLandingAreaInfo(): Observable<any> {
+    return this._httpGetLandingAreaInfo();
+  }
 }
 
-export { ContentBlocksService, ContentBlocksServiceMock };
+export { ContentBlocksService };
