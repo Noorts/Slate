@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ContentBlocksService } from './content-blocks.service';
+import { StrapiService } from './strapi.service';
 
-describe('ContentBlocksService', () => {
-  let service: ContentBlocksService;
+describe('StrapiService', () => {
+  let service: StrapiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ContentBlocksService);
+    service = TestBed.inject(StrapiService);
   });
 
   it('should be created', () => {

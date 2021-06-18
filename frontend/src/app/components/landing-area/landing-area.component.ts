@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentBlocksService } from '@services/content-blocks.service';
+import { StrapiService } from '@services/strapi.service';
 
 @Component({
   selector: 'app-landing-area',
@@ -13,10 +13,10 @@ export class LandingAreaComponent implements OnInit {
     base_text: ''
   };
 
-  constructor(private contentBlockService: ContentBlocksService) { }
+  constructor(private strapiService: StrapiService) { }
 
   ngOnInit(): void {
-    this.contentBlockService.getLandingAreaInfo().subscribe(landingAreaContent => {
+    this.strapiService.getLandingAreaInfo().subscribe(landingAreaContent => {
       this.landingAreaContent = landingAreaContent;
     });
   }

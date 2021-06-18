@@ -7,7 +7,7 @@ import { environment } from '@env/environment';
 @Injectable({
   providedIn: 'root'
 })
-class ContentBlocksService {
+class StrapiService {
   public data: ContentBlock[] = [];
 
   constructor(private httpClient: HttpClient) { }
@@ -29,4 +29,4 @@ class ContentBlocksService {
   }
 }
 
-export { ContentBlocksService };
+export { StrapiService };

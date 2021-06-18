@@ -3,7 +3,7 @@ import { ContentBlock } from '@models/ContentBlock';
 import { Card } from '@models/Card';
 import { InfoCard } from '@models/InfoCard';
 import { ProjectCard } from '@models/ProjectCard';
-import { ContentBlocksService } from '@services/content-blocks.service';
+import { StrapiService } from '@services/strapi.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +13,10 @@ import { ContentBlocksService } from '@services/content-blocks.service';
 export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
 
-  constructor(private contentBlockService: ContentBlocksService) { }
+  constructor(private strapiService: StrapiService) { }
 
   ngOnInit(): void {
-    this.contentBlockService.getAllContentBlocks().subscribe(rawContentBlocks => {
+    this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
       this.contentBlocks = this.setupContentBlocks(rawContentBlocks);
     });
   }
