@@ -8,9 +8,9 @@ import { StrapiService } from '@services/strapi.service';
 })
 export class LandingAreaComponent implements OnInit {
   public landingAreaContent = {
-    intro_text: '',
+    introText: '',
     name: '',
-    base_text: ''
+    baseText: ''
   };
 
   constructor(private strapiService: StrapiService) { }
