@@ -1,5 +1,7 @@
 <div class="home-container">
-    <app-header class="header"></app-header>
+    <div class="header-container">
+        <app-header class="header"></app-header>
+    </div>
     <app-landing-area class="landing-area"></app-landing-area>
     <app-content-block [model]="contentblock"
         *ngFor="let contentblock of contentBlocks">

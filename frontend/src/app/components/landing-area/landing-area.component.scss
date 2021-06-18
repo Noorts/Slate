@@ -8,8 +8,6 @@
     text-align: center;
     height: 100vh; /* Viewport height, the header is now fixed. */
 
-    border-bottom: 1px solid black;
-
     &:before {
         content: '\200B';
         display: inline-block;
@@ -38,6 +36,12 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
     }
+}
+
+.landing-area-bottom-border {
+    width: 800px;
+    margin: auto;
+    border-bottom: 1px solid black;
 }
 
 // @media only screen and (min-width: 768px) {
