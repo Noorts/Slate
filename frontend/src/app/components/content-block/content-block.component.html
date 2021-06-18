@@ -2,8 +2,11 @@
 <div class="content-block-container">
     <h1 class="content-block-title">{{ model.blockHeader }}</h1>
     <div *ngFor="let card of model.cards; index as i">
+        <div class="vertical-line" *ngIf="i != 0"
+            [ngClass]="{'vertical-line-with-status':
+            model.contentType === 'infoCards' && $any(card).statusContent !== ''}">
+        </div>
         <app-info-card *ngIf="model.contentType === 'infoCards'" [model]="card" ></app-info-card>
         <app-project-card *ngIf="model.contentType === 'projectCards'" [model]="card" ></app-project-card>
-        <div class="vertical-line" *ngIf="i != model.cards.length - 1"></div>
     </div>
 </div>
