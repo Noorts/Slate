@@ -21,21 +21,26 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  /**
+   * Transforms raw content blocks retrieved from Strapi to objects that Angular can render as content block components.
+   *
+   * @param rawContentBlocks A JSON that contains a list of raw content blocks.
+   */
   setupContentBlocks(rawContentBlocks: any): ContentBlock[] {
     const contentBlocks: ContentBlock[] = [];
 
-    for (const contentblock of rawContentBlocks) {
+    for (const contentBlock of rawContentBlocks) {
       const listOfCards: Card[] = [];
-      const contentType = contentblock.contentType;
-      const contentBlockCards = contentblock[contentType];
+      const contentType = contentBlock.contentType;
 
-      for (const currentCard of contentBlockCards) {
+      // Set each card to its corresponding card model.
+      for (const currentCard of contentBlock[contentType]) {
         const curObj = Object.assign(contentType === 'infoCards' ? new InfoCard() : new ProjectCard(), currentCard);
         listOfCards.push(curObj);
       }
 
       contentBlocks.push(Object.assign(new ContentBlock(), {
-        blockHeader: contentblock.blockHeader, contentType: contentblock.contentType, cards: listOfCards
+        blockHeader: contentBlock.blockHeader, contentType: contentBlock.contentType, cards: listOfCards
       }));
     }
 

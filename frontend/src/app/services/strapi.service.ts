@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@env/environment';
 
+/**
+ * A service that facilitates pulling data from the Strapi CMS.
+ */
 @Injectable({
   providedIn: 'root'
 })
