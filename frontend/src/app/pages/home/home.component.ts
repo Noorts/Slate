@@ -4,6 +4,7 @@ import { Card } from '@models/Card';
 import { InfoCard } from '@models/InfoCard';
 import { ProjectCard } from '@models/ProjectCard';
 import { StrapiService } from '@services/strapi.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +14,32 @@ import { StrapiService } from '@services/strapi.service';
 export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
 
-  constructor(private strapiService: StrapiService) { }
+  constructor(private strapiService: StrapiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
       this.contentBlocks = this.setupContentBlocks(rawContentBlocks);
+
+      /* Timeout added because the DOM needs to be updated with the content blocks.
+       * This should be done dynamically, maybe using a lifecycle hook. */
+      setTimeout(() => {
+        this.scrollToFragmentAnchor();
+      }, 10);
     });
+  }
+
+  /**
+   * Will scroll the view to the section that is contained in the URL as a fragment.
+   *
+   * Because a large portion of the home page is loaded asynchronously,
+   * we have to scroll their programmatically after the content has loaded.
+   */
+  scrollToFragmentAnchor(): void {
+    const fragment = this.route.snapshot.fragment;
+    if (fragment != null) {
+      const anchor = document.getElementById(fragment);
+      anchor.scrollIntoView({behavior: 'auto'});
+    }
   }
 
   /**
