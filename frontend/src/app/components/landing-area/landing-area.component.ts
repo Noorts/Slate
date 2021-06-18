@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StrapiService } from '@services/strapi.service';
 
 @Component({
   selector: 'app-landing-area',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-area.component.scss']
 })
 export class LandingAreaComponent implements OnInit {
+  public landingAreaContent = {
+    intro_text: '',
+    name: '',
+    base_text: ''
+  };
 
-  constructor() { }
+  constructor(private strapiService: StrapiService) { }
 
   ngOnInit(): void {
+    this.strapiService.getLandingAreaInfo().subscribe(landingAreaContent => {
+      this.landingAreaContent = landingAreaContent;
+    });
   }
 
 }

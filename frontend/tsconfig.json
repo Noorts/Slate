@@ -8,6 +8,7 @@
       "@services/*": ["src/app/services/*"],
       "@components/*": ["src/app/components/*"],
       "@data/*": ["src/app/data/*"],
+      "@env/*": ["src/environments/*"],
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
