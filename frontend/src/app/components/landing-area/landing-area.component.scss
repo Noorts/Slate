@@ -7,6 +7,7 @@
 .landing-area-container {
     text-align: center;
     height: 100vh; /* Viewport height, the header is now fixed. */
+    margin: 0 20px;
 
     &:before {
         content: '\200B';
@@ -17,7 +18,7 @@
     }
 
     .landing-area-container-centered {
-        width: 554px;
+        max-width: 554px;
         display: inline-block;
 
         vertical-align: middle;

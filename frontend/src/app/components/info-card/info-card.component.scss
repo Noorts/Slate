@@ -1,18 +1,20 @@
 .info-card {
-    width: 87%;
+    width: 80vw;
     max-width: 600px;
     min-height: 220px;
 
     // overflow-y: hidden; // Enable this when the expand button has been implemented.
 
+    margin: 16px auto 18px auto;
     padding: 18px 25px;
+
+    // Used to negate the small additional margin that is on the left by default
+    position: relative;
+    left: -2px;
+
     text-align: left;
     display: flex;
     flex-direction: column;
-    position: relative;
-
-    margin-top: 16px;
-    margin-bottom: 18px;
 
     border: 2px solid #D8D8D8;
 }

@@ -29,16 +29,19 @@
 
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contact-button {
+    margin: 0 5px;
+
     &:hover {
         color: white;
         background-color: grey;
     }
 
     &.first {
-        margin-right: 24px;
+        margin-bottom: 14px;
     }
 
     position: relative;
@@ -60,7 +63,7 @@
     top: 0;
     left: 0;
     text-decoration: none; /* No underlines on the link */
-    z-index: 10; /* Places the link above everything else in the div */
+    z-index: 2; /* Places the link above everything else in the div */
     background-color: #FFF; /* Fix to make div clickable in IE */
     opacity: 0; /* Fix to make div clickable in IE */
     filter: alpha(opacity=1); /* Fix to make div clickable in IE */
