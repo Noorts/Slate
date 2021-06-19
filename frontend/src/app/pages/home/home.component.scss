@@ -6,13 +6,16 @@
 }
 
 .header {
+    width: 100%;
+    height: 60px;
+
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
 
-    width: 800px;
-
     display: flex;
+    justify-content: space-between;
 
     background: #F4F6F8;
 }
@@ -21,7 +24,27 @@
     width: 100vw;
     min-height: 100vh;
 
-    display: block;
-
     margin-bottom: 240px;
+
+    display: block;
+}
+
+.main-content {
+    transition: all 0.3s cubic-bezier(0.645,0.045,0.355,1);
+
+    &.main-content-blurred {
+        filter: blur(6px) brightness(0.6);
+    }
+}
+
+@media only screen and (min-width: 1120px) {
+    .header {
+        max-width: 800px;
+
+        left: unset;
+    }
+
+    .main-content-blurred {
+        filter: none !important;
+    }
 }
