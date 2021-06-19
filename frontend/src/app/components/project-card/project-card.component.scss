@@ -8,13 +8,12 @@
     padding: 18px 22px;
 
     // Used to negate the small additional margin that is on the left by default
-    position:relative;
-    left:-2px;
+    position: relative;
+    left: -2px;
 
-    text-align: left;
     display: flex;
     flex-direction: column;
-    position: relative;
+    text-align: left;
 
     border: 2px solid #D8D8D8;
 }
@@ -24,20 +23,16 @@
 }
 
 .project-card-header-container {
-    display: inline;
-}
-
-.project-card-header-container {
-    height: 36px; // TODO Why is the same selector above here?
+    height: 36px;
 
     vertical-align: middle;
 
     .project-card-image {
         height: 100%;
 
-        vertical-align: middle;
-
         margin-right: 12px;
+
+        vertical-align: middle;
     }
 }
 

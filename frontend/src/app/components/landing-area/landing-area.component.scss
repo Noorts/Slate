@@ -1,13 +1,16 @@
 .home-title {
+    margin: 22.8px 0px 30.8px;
+
     font-size: 40px;
     font-weight: 700;
-    margin: 22.8px 0px 30.8px;
 }
 
 .landing-area-container {
-    text-align: center;
     height: 100vh; /* Viewport height, the header is now fixed. */
+
     margin: 0 20px;
+
+    text-align: center;
 
     &:before {
         content: '\200B';
@@ -42,6 +45,8 @@
 .landing-area-bottom-border {
     width: 80%;
     max-width: 800px;
+
     margin: auto;
+
     border-bottom: 1px solid black;
 }

@@ -7,36 +7,41 @@ $offset: 150px;
 
 .header-logo-container {
     height: 100%;
-    vertical-align: middle;
 
     .header-logo-helper {
         height: 100%;
+
         display: inline-block;
+
         vertical-align: middle;
     }
 
     .header-logo {
-        vertical-align: middle;
-        padding: 0px 10px;
         width: 24px;
+        padding: 0px 10px;
+
+        vertical-align: middle;
     }
 }
 
 .header-sidebar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 75vw;
+    max-width: 300px;
+    height: 100vh;
 
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 75vw;
-    max-width: 300px;
-    height: 100vh;
-    background: #e6e9ec;
-    visibility: hidden;
     z-index: 5;
+
+    visibility: hidden;
+    background: #e6e9ec;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transform: translateX(100vw);
     transition: all 0.3s cubic-bezier(0.645,0.045,0.355,1);
 
@@ -48,6 +53,7 @@ $offset: 150px;
 
 .header-sidebar-item-container {
     width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,13 +66,15 @@ $offset: 150px;
 }
 
 .overlay {
-    display: none;
-    z-index: 4;
+    width: 100%;
+
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    z-index: 4;
+
+    display: none;
 
     &.overlay-visible {
         display: unset !important;
@@ -129,7 +137,7 @@ $offset: 150px;
             width: 6px;
             height: 6px;
             top: 28px;
-            left:calc(50% - 3px);
+            left: calc(50% - 3px);
 
             border-radius: 100%;
             background: black;
@@ -141,7 +149,7 @@ $offset: 150px;
             width: 6px;
             height: 6px;
             top: 28px;
-            left:calc(50% - 3px);
+            left: calc(50% - 3px);
 
             border-radius: 100%;
             background: black;
@@ -173,7 +181,7 @@ $offset: 150px;
     }
 }
 
-// CSS Hamburger credit goes to: Jonathan Suh, https://github.com/jonsuh/hamburgers/
+// Credit for the CSS Hamburger goes to: Jonathan Suh, https://github.com/jonsuh/hamburgers/
 
 // Settings
 // ==================================================
@@ -221,10 +229,10 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
     &:hover {
         @if $hamburger-hover-use-filter == true {
-        filter: $hamburger-hover-filter;
+            filter: $hamburger-hover-filter;
         }
         @else {
-        opacity: $hamburger-hover-opacity;
+            opacity: $hamburger-hover-opacity;
         }
     }
 
@@ -241,7 +249,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
         .hamburger-inner,
         .hamburger-inner::before,
         .hamburger-inner::after {
-        background-color: $hamburger-active-layer-color;
+            background-color: $hamburger-active-layer-color;
         }
     }
 }
@@ -288,39 +296,35 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 .hamburger--spin {
     .hamburger-inner {
-      transition-duration: 0.22s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
-      &::before {
-        transition: top 0.1s 0.25s ease-in,
-                    opacity 0.1s ease-in;
-      }
-
-      &::after {
-        transition: bottom 0.1s 0.25s ease-in,
-                    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      }
-    }
-
-    &.is-active {
-      .hamburger-inner {
-        transform: rotate(225deg);
-        transition-delay: 0.12s;
-        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-duration: 0.22s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
         &::before {
-          top: 0;
-          opacity: 0;
-          transition: top 0.1s ease-out,
-                      opacity 0.1s 0.12s ease-out;
+            transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
         }
 
         &::after {
-          bottom: 0;
-          transform: rotate(-90deg);
-          transition: bottom 0.1s ease-out,
-                      transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
         }
-      }
+    }
+
+    &.is-active {
+        .hamburger-inner {
+            transform: rotate(225deg);
+            transition-delay: 0.12s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &::before {
+            top: 0;
+            opacity: 0;
+            transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+            }
+
+            &::after {
+            bottom: 0;
+            transform: rotate(-90deg);
+            transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
     }
 }
