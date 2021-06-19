@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
     const headerSideBar = document.querySelector('.header-sidebar');
     const mainContent = document.querySelector('.main-content');
     const overlay = document.querySelector('.overlay');
+    const siteWrapper = document.querySelector('.site-wrapper');
 
     const hamburgerMenuButton = document.querySelector('.hamburger');
     hamburgerMenuButton.addEventListener('click', () => {
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
       headerSideBar.classList.toggle('header-sidebar-visible');
       mainContent.classList.toggle('main-content-blurred');
       overlay.classList.toggle('overlay-visible');
+      siteWrapper.classList.toggle('disable-scroll');
     });
 
     const headerSideBarItems = document.querySelectorAll('.header-sidebar-item');
@@ -29,6 +31,7 @@ export class HeaderComponent implements OnInit {
         headerSideBar.classList.remove('header-sidebar-visible');
         mainContent.classList.remove('main-content-blurred');
         overlay.classList.remove('overlay-visible');
+        siteWrapper.classList.remove('disable-scroll');
       });
     });
 
@@ -37,6 +40,7 @@ export class HeaderComponent implements OnInit {
       headerSideBar.classList.remove('header-sidebar-visible');
       mainContent.classList.remove('main-content-blurred');
       overlay.classList.remove('overlay-visible');
+      siteWrapper.classList.remove('disable-scroll');
     });
   }
 }
