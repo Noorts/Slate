@@ -39,13 +39,8 @@
 }
 
 .landing-area-bottom-border {
-    width: 800px;
+    width: 80%;
+    max-width: 800px;
     margin: auto;
     border-bottom: 1px solid black;
 }
-
-// @media only screen and (min-width: 768px) {
-//     .home-title {
-//         font-size: 40px;
-//     }
-// }
