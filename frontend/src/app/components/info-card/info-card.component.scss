@@ -6,7 +6,7 @@
     // overflow-y: hidden; // Enable this when the expand button has been implemented.
 
     margin: 16px auto 18px auto;
-    padding: 18px 25px;
+    padding: 16px 20px;
 
     // Used to negate the small additional margin that is on the left by default
     position: relative;
@@ -16,7 +16,8 @@
     flex-direction: column;
     text-align: left;
 
-    border: 2px solid #D8D8D8;
+    background-color: #ececec;
+    border: solid #D6DCE0 1px;
 }
 
 .info-card-item {
@@ -25,21 +26,21 @@
 
 .info-card-status {
     width: 220px;
-    height: 26px;
+    height: 24px;
 
     position: absolute;
-    top: -15px;
+    top: -13px;
     left: calc(50% - 110px);
 
     text-align: center;
 
-    background-color:#D8D8D8; // Alternatively: #ffc374
+    background-color:#C4C4C4; // Alternatively: #ffc374
 }
 
 .info-card-status-content {
     vertical-align: middle;
 
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .info-card-header {
@@ -54,4 +55,5 @@
 .info-card-description {
     margin-top: 10px;
     white-space: pre-wrap;
+    font-size: 0.95em;
 }

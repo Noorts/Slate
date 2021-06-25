@@ -1,5 +1,6 @@
 $header-height: 60px;
 $offset: 150px;
+$hover-opacity: 0.7;
 
 .header-main-container {
     display: none;
@@ -21,22 +22,27 @@ $offset: 150px;
         padding: 0px 10px;
 
         vertical-align: middle;
+
+        &:hover {
+            opacity: $hover-opacity;
+        }
     }
 }
 
 .header-sidebar {
     width: 75vw;
     max-width: 300px;
-    height: 100vh;
+    height: calc(100vh - 60px); // Hardcoded header-height.
 
     position: fixed;
-    top: 0;
     bottom: 0;
     right: 0;
     z-index: 5;
 
     visibility: hidden;
-    background: #e6e9ec;
+    background: var(--sidebar-background-color);
+    box-shadow: rgba(60, 64, 67, 0.3) -1px 0px 2px 0px, rgba(60, 64, 67, 0.15) -1px 0px 3px 1px;
+    clip-path: inset(0px 0px 0px -15px);
 
     display: flex;
     justify-content: center;
@@ -62,7 +68,9 @@ $offset: 150px;
 
 .header-sidebar-item {
     margin-bottom: 32px;
+
     text-decoration: none;
+    color: var(--sidebar-text-color);
 }
 
 .overlay {
@@ -91,13 +99,18 @@ $offset: 150px;
 }
 
 .site-title {
-    margin-bottom: 1px;
+    margin-top: 3px;
 
     text-decoration: none;
 
     font-size: 1.375em;
     font-weight: 600;
     font-family: Helvetica;
+    color: var(--header-text-color);
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
 }
 
 .header-offset-container.title {
@@ -107,6 +120,10 @@ $offset: 150px;
 @media only screen and (min-width: 1120px) {
     button.hamburger {
         display: none;
+    }
+
+    .header-logo {
+        filter: invert(100%);
     }
 
     .header-sidebar {
@@ -131,29 +148,26 @@ $offset: 150px;
         position: relative;
         text-decoration: none;
 
-        &.active:before{
+        color: var(--header-text-color);
+
+        &.active:before {
             content: "";
             position: absolute;
             width: 6px;
             height: 6px;
-            top: 28px;
+            top: 24px;
             left: calc(50% - 3px);
 
             border-radius: 100%;
-            background: black;
+            background: var(--header-text-color);
         }
 
-        &:hover:before{
-            content: "";
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            top: 28px;
-            left: calc(50% - 3px);
+        &:hover {
+            opacity: $hover-opacity;
 
-            border-radius: 100%;
-            background: black;
-            z-index: 1;
+            &:before {
+                z-index: 1;
+            }
         }
     }
 
@@ -190,7 +204,7 @@ $hamburger-padding-y           : 20px !default;
 $hamburger-layer-width         : 32px !default;
 $hamburger-layer-height        : 3px !default;
 $hamburger-layer-spacing       : 5px !default;
-$hamburger-layer-color         : #000 !default;
+$hamburger-layer-color         : #F5F5F5 !default;
 $hamburger-layer-border-radius : 4px !default;
 $hamburger-hover-opacity       : 0.7 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;

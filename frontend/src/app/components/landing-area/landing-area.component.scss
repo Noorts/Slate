@@ -8,9 +8,9 @@
 .landing-area-container {
     height: 100vh; /* Viewport height, the header is now fixed. */
 
-    margin: 0 20px;
-
     text-align: center;
+
+    background-color: var(--alternate-background-color);
 
     &:before {
         content: '\200B';
@@ -47,6 +47,4 @@
     max-width: 800px;
 
     margin: auto;
-
-    border-bottom: 1px solid black;
 }

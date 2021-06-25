@@ -15,7 +15,8 @@
     flex-direction: column;
     text-align: left;
 
-    border: 2px solid #D8D8D8;
+    border: solid #D6DCE0 1px;
+    background-color: #ececec;
 }
 
 .project-card-item {
@@ -66,4 +67,5 @@
 .project-card-description {
     margin-top: 12px;
     white-space: pre-wrap;
+    font-size: 0.95em;
 }

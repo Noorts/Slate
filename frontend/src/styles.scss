@@ -1,8 +1,26 @@
+:root {
+    --default-background-color: #F5F5F5; // #F8F9FB
+    --default-text-color: #0D131E; // #23272a
+
+    --alternate-background-color: #FFFFFF;
+
+    --header-background-color: #0D131E;
+    --header-text-color: #F5F5F5;
+
+    --sidebar-background-color: #F5F5F5;
+    --sidebar-text-color: #23272a;
+}
+
 /* You can add global styles to this file, and also import other style files */
-* {
+html {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     // font-family: Futura ,Trebuchet MS, Arial, sans-serif;
-    color: #000000;
+    color: var(--default-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--default-text-color);
 }
 
 .text-header {

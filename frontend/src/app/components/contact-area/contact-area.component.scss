@@ -4,9 +4,10 @@
 }
 
 .contact-area-container {
-    margin-top: 48px;
     text-align: center;
-    height: 40vh; /* Viewport height, the header is now fixed. */
+    height: 70vh; /* Viewport height, the header is now fixed. */
+
+    background-color: var(--alternate-background-color);
 
     &:before {
         content: '\200B';
@@ -36,8 +37,7 @@
     margin: 0 5px;
 
     &:hover {
-        color: white;
-        background-color: grey;
+        background-color: rgb(224, 224, 224);
     }
 
     &.first {
@@ -54,6 +54,7 @@
     align-items: center;
 
     border: 1px solid black;
+    background-color: #ECECEC;
 }
 
 .contact-button-link {
