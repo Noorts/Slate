@@ -39,6 +39,12 @@
         padding: 5px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
+
+        transition: opacity .2s ease-in-out,transform .2s ease-in-out;
+
+        &:hover {
+            transform: rotate(45deg) translateY(3px) translateX(3px);
+        }
     }
 }
 
