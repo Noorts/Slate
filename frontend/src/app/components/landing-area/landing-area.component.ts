@@ -19,7 +19,7 @@ export class LandingAreaComponent implements OnInit {
   ngOnInit(): void {
     this.strapiService.getLandingAreaInfo().subscribe(landingAreaContent => {
       this.landingAreaContent = landingAreaContent;
-      this.pageLoaderService.displayPage('landingAreaReady');
+      this.pageLoaderService.updatePageLoaderStatus('landingAreaReady');
     });
   }
 

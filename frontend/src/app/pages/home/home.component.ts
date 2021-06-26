@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
       this.contentBlocks = this.setupContentBlocks(rawContentBlocks);
 
-      this.pageLoaderService.displayPage('contentBlocksReady');
+      this.pageLoaderService.updatePageLoaderStatus('contentBlocksReady');
 
       setTimeout(() => {
         /* Timeout added because the DOM needs to be updated with the content blocks.
