@@ -1,6 +1,6 @@
 $header-height: 60px;
 $offset: 150px;
-$hover-opacity: 0.7;
+$hover-opacity: 0.8;
 
 .header-main-container {
     display: none;
@@ -71,6 +71,10 @@ $hover-opacity: 0.7;
 
     text-decoration: none;
     color: var(--sidebar-text-color);
+
+    &:hover {
+        opacity: $hover-opacity;
+    }
 }
 
 .overlay {

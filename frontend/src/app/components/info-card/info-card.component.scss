@@ -16,8 +16,8 @@
     flex-direction: column;
     text-align: left;
 
-    background-color: #ececec;
-    border: solid #D6DCE0 1px;
+    background-color: #f2f2f2;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .info-card-item {
@@ -34,7 +34,8 @@
 
     text-align: center;
 
-    background-color:#C4C4C4; // Alternatively: #ffc374
+    background-color:#D9D9D9; // Alternatively: #ffc374
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 2px -2px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .info-card-status-content {
@@ -44,12 +45,13 @@
 }
 
 .info-card-header {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
 }
 
 .info-card-date {
     color: #717171;
+    font-size: 1em;
 }
 
 .info-card-description {

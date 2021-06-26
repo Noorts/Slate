@@ -16,6 +16,15 @@
     margin-bottom: 58px;
 }
 
+.content-block-divider {
+    width: 90%;
+    height: 1px;
+
+    margin: auto;
+
+    background-color: #e6e6e6;
+}
+
 .vertical-line {
     height: 20px;
 
@@ -23,7 +32,7 @@
 
     display: inline-block;
 
-    border-left: 2px solid #D6DCE0;
+    border-left: 1px solid #F2F2F2;
   }
 
 .vertical-line-with-status {
@@ -31,7 +40,7 @@
 }
 
 #section-Experience {
-    background-color:  rgb(243, 243, 243);
+    background: linear-gradient(#f9f9f9, #fff);
 }
 
 #section-Education {
@@ -39,5 +48,5 @@
 }
 
 #section-Projects {
-    background-color: rgb(243, 243, 243);
+    background-color: #FFFFFF;
 }

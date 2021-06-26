@@ -15,8 +15,8 @@
     flex-direction: column;
     text-align: left;
 
-    border: solid #D6DCE0 1px;
-    background-color: #ececec;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #f2f2f2;
 }
 
 .project-card-item {
@@ -60,7 +60,7 @@
 }
 
 .project-card-header {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
 }
 

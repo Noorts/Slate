@@ -1,5 +1,6 @@
 <div class="content-block-container" id="section-{{ model.blockHeader }}">
     <a id="{{ model.blockHeader }}" class="nav-anchor">&nbsp;</a>
+    <div class="content-block-divider" *ngIf="model.blockHeader !== 'Experience'"></div>
     <div class="content-block-content-container">
         <h1 class="content-block-title">{{ model.blockHeader }}</h1>
         <div *ngFor="let card of model.cards; index as i">
