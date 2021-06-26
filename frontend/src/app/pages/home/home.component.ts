@@ -5,6 +5,7 @@ import { InfoCard } from '@models/InfoCard';
 import { ProjectCard } from '@models/ProjectCard';
 import { StrapiService } from '@services/strapi.service';
 import { ActivatedRoute } from '@angular/router';
+import { PageLoaderService } from '@services/page-loader.service';
 
 @Component({
   selector: 'app-home',
@@ -14,17 +15,20 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
 
-  constructor(private strapiService: StrapiService, private route: ActivatedRoute) { }
+  constructor(private strapiService: StrapiService, private route: ActivatedRoute,
+    private pageLoaderService: PageLoaderService) { }
 
   ngOnInit(): void {
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
       this.contentBlocks = this.setupContentBlocks(rawContentBlocks);
 
-      /* Timeout added because the DOM needs to be updated with the content blocks.
-       * This should be done dynamically, maybe using a lifecycle hook. */
+      this.pageLoaderService.displayPage('contentBlocksReady');
+
       setTimeout(() => {
+        /* Timeout added because the DOM needs to be updated with the content blocks.
+        * This should be done dynamically, maybe using a lifecycle hook. */
         this.scrollToFragmentAnchor();
-      }, 10);
+      }, 400);
     });
   }
 

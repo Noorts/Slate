@@ -16,6 +16,10 @@
 
     scroll-behavior: smooth;
 
+    &.hidden {
+        visibility: hidden;
+    }
+
     &.disable-scroll {
         overflow-y: hidden;
     }

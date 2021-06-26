@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageLoaderService } from '@services/page-loader.service';
 import { StrapiService } from '@services/strapi.service';
 
 @Component({
@@ -13,11 +14,12 @@ export class LandingAreaComponent implements OnInit {
     baseText: ''
   };
 
-  constructor(private strapiService: StrapiService) { }
+  constructor(private strapiService: StrapiService, private pageLoaderService: PageLoaderService) { }
 
   ngOnInit(): void {
     this.strapiService.getLandingAreaInfo().subscribe(landingAreaContent => {
       this.landingAreaContent = landingAreaContent;
+      this.pageLoaderService.displayPage('landingAreaReady');
     });
   }
 
