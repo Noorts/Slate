@@ -1,9 +1,12 @@
-<div class="info-card">
+<div class="info-card" #infoCard>
     <div class="info-card-status" *ngIf="model.statusContent">
         <span class="info-card-status-content text-small-base">{{ model.statusContent }}</span>
     </div>
     <span class="info-card-item info-card-header">{{ model.header }}</span>
     <span class="info-card-item info-card-org text-small-base">{{ model.organisation }}</span>
     <span class="info-card-item info-card-date text-small-base">{{ model.dateRange }}</span>
-    <span class="info-card-item info-card-description text-small-base">{{ model.description }}</span>
+    <span class="info-card-item info-card-description text-small-base" #description>{{ model.description }}</span>
+    <div class="info-card-read-more-container" #readMoreContainer>
+        <h1 class="info-card-read-more" (click)="revealFullDescription()">Read more</h1>
+    </div>
 </div>
