@@ -1,34 +1,18 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
+import { CardComponent } from '@components/card/card.component';
 import { InfoCard } from 'src/app/models/InfoCard';
 
 @Component({
   selector: 'app-info-card',
   templateUrl: './info-card.component.html',
-  styleUrls: ['./info-card.component.scss']
+  styleUrls: ['./info-card.component.scss', '../card/card.component.scss']
 })
-export class InfoCardComponent implements AfterViewInit {
+export class InfoCardComponent extends CardComponent implements AfterViewInit {
 
   @Input() model?: InfoCard = new InfoCard();
-  @ViewChild('card') infoCardElement: ElementRef;
-  @ViewChild('description') descriptionElement: ElementRef;
-  @ViewChild('readMoreContainer') readMoreContainerElement: ElementRef;
 
-  constructor() { }
-
-  ngAfterViewInit(): void {
-    if (!this.isDescriptionClamped()) {
-      this.readMoreContainerElement.nativeElement.classList.add('hidden');
-    }
-  }
-
-  isDescriptionClamped(): boolean {
-    const el = this.descriptionElement.nativeElement;
-    return el.scrollHeight > el.clientHeight;
-  }
-
-  revealFullDescription(): void {
-    this.descriptionElement.nativeElement.classList.add('revealed');
-    this.infoCardElement.nativeElement.classList.add('revealed');
-    this.readMoreContainerElement.nativeElement.classList.add('hidden');
+  constructor() {
+    /* See the CardComponent for the logic behind the read more functionality. */
+    super();
   }
 }

@@ -1,50 +1,30 @@
-.project-card {
-    width: 80vw;
+/* Most of the card its styling is contained in the css of the card component. */
+
+.card {
     max-width: 612px;
-    min-height: 220px;
-    max-height: 280px;
 
-    margin: 16px auto 18px auto;
     padding: 18px 22px;
-
-    // Used to negate the small additional margin that is on the left by default
-    position: relative;
-    left: -2px;
-
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    background-color: #f2f2f2;
-
-    transition: max-height 1s ease-in;
-
-    &.revealed {
-        // CSS used to add animation to resizing of card from: https://stackoverflow.com/a/8331169
-        max-height: 2000px;
-    }
 }
 
-.project-card-item {
-    margin-bottom: 3px;
-}
-
-.project-card-header-container {
+.card-header-container {
     height: 36px;
 
     vertical-align: middle;
 
-    .project-card-image {
+    .card-image {
         height: 100%;
 
         margin-right: 12px;
 
         vertical-align: middle;
     }
+
+    .card-header-link {
+        text-decoration: none;
+    }
 }
 
-.project-card-info-container {
+.card-info-container {
     height: 24px;
 
     position: absolute;
@@ -53,61 +33,11 @@
 
     vertical-align: middle;
 
-    .project-card-info-source-image {
+    .card-info-source-image {
         height: 100%;
 
         vertical-align: middle;
 
         margin-right: 12px;
-    }
-}
-
-.project-card-header-link {
-    text-decoration: none;
-}
-
-.project-card-header {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.project-card-description {
-    margin-top: 12px;
-    white-space: pre-wrap;
-    font-size: 0.95em;
-
-    // See the following link for the line clamp trick: https://css-tricks.com/almanac/properties/l/line-clamp/
-    display: -webkit-box;
-    -webkit-line-clamp: 8;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-
-    &.revealed {
-        display: unset;
-    }
-}
-
-.project-card-read-more-container {
-    margin-top: 6px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &.hidden {
-        display: none;
-    }
-}
-
-.project-card-read-more {
-    padding: 0px 3px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
-    font-size: 0.8em;
-    font-weight: 400;
-    color: #404040;
-
-    &:hover {
-        opacity: 0.75;
     }
 }

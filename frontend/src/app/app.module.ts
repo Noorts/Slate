@@ -14,6 +14,7 @@ import { StrapiService } from '@services/strapi.service';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ContactAreaComponent } from './components/contact-area/contact-area.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     InfoCardComponent,
     ContentBlockComponent,
     ProjectCardComponent,
-    ContactAreaComponent
+    ContactAreaComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
