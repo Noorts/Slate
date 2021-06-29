@@ -1,4 +1,4 @@
-<div class="project-card">
+<div class="project-card" #card>
     <div class="project-card-info-container">
         <a [href]="model.sourceUrl" alt="Project Source Image" target="_blank" rel="noopener noreferrer">
             <img class="project-card-info-source-image" [src]="model.sourceImageUrl">
@@ -10,5 +10,8 @@
             <span class="project-card-item project-card-header">{{ model.header }}</span>
         </a>
     </div>
-    <span class="project-card-item project-card-description text-small-base">{{ model.description }}</span>
+    <span class="project-card-item project-card-description text-small-base" #description>{{ model.description }}</span>
+    <div class="project-card-read-more-container" #readMoreContainer>
+        <span class="project-card-read-more" (click)="revealFullDescription()">Read More</span>
+    </div>
 </div>

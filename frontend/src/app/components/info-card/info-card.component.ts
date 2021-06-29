@@ -9,7 +9,7 @@ import { InfoCard } from 'src/app/models/InfoCard';
 export class InfoCardComponent implements AfterViewInit {
 
   @Input() model?: InfoCard = new InfoCard();
-  @ViewChild('infoCard') infoCardElement: ElementRef;
+  @ViewChild('card') infoCardElement: ElementRef;
   @ViewChild('description') descriptionElement: ElementRef;
   @ViewChild('readMoreContainer') readMoreContainerElement: ElementRef;
 
