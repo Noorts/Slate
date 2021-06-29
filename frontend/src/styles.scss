@@ -13,8 +13,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 html {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    // font-family: Futura ,Trebuchet MS, Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: var(--default-text-color);
 }
 
@@ -34,6 +33,6 @@ a {
 }
 
 .text-small-base {
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: 400;
 }
