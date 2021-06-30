@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_cards",
+  "info": {
+    "name": "projectCard",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "projectImageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sourceImageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "sourceUrl": {
+      "type": "string",
+      "required": true
+    },
+    "infoContent": {
+      "model": "content-block",
+      "via": "projectCards"
+    }
+  }
+}

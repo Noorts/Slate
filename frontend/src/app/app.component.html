@@ -1,5 +1,4 @@
-<div class="site-wrapper">
-    <div class="content-container">
-        <router-outlet></router-outlet>
-    </div>
+<div class="site-wrapper hidden" (scroll)="refreshActiveHeaderItem()">
+    <a id="Landing" class="nav-anchor"></a>
+    <router-outlet></router-outlet>
 </div>

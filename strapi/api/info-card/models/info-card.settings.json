@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info_cards",
+  "info": {
+    "name": "infoCard",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "organisation": {
+      "type": "string",
+      "required": true
+    },
+    "dateRange": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "statusContent": {
+      "type": "string"
+    },
+    "infoContent": {
+      "model": "content-block",
+      "via": "infoCards"
+    }
+  }
+}

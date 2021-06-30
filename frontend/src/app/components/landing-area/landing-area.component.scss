@@ -1,13 +1,16 @@
 .home-title {
+    margin: 22.8px 0px 30.8px;
+
     font-size: 40px;
     font-weight: 700;
 }
 
 .landing-area-container {
-    text-align: center;
-    height: calc(100vh - 60px); /* Viewport height minus the height of the header. */
+    height: 100vh; /* Viewport height, the header is now fixed. */
 
-    border-bottom: 1px solid black;
+    text-align: center;
+
+    background-color: var(--alternate-background-color);
 
     &:before {
         content: '\200B';
@@ -18,7 +21,7 @@
     }
 
     .landing-area-container-centered {
-        width: 400px;
+        max-width: 554px;
         display: inline-block;
 
         vertical-align: middle;
@@ -36,11 +39,22 @@
         padding: 5px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
+
+        transition: opacity .2s ease-in-out,transform .2s ease-in-out;
+
+        &:hover {
+            transform: rotate(45deg) translateY(3px) translateX(3px);
+        }
     }
 }
 
-// @media only screen and (min-width: 768px) {
-//     .home-title {
-//         font-size: 40px;
-//     }
-// }
+.landing-area-base-text {
+    white-space: pre-wrap;
+}
+
+.landing-area-bottom-border {
+    width: 80%;
+    max-width: 800px;
+
+    margin: auto;
+}

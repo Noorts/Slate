@@ -1,0 +1,43 @@
+/* Most of the card its styling is contained in the css of the card component. */
+
+.card {
+    max-width: 612px;
+
+    padding: 18px 22px;
+}
+
+.card-header-container {
+    height: 36px;
+
+    vertical-align: middle;
+
+    .card-image {
+        height: 100%;
+
+        margin-right: 12px;
+
+        vertical-align: middle;
+    }
+
+    .card-header-link {
+        text-decoration: none;
+    }
+}
+
+.card-info-container {
+    height: 24px;
+
+    position: absolute;
+    right: 0px;
+    top: 12px;
+
+    vertical-align: middle;
+
+    .card-info-source-image {
+        height: 100%;
+
+        vertical-align: middle;
+
+        margin-right: 12px;
+    }
+}

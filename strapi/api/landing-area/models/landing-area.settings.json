@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_areas",
+  "info": {
+    "name": "landing-area",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "introText": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "baseText": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

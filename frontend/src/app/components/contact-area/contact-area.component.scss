@@ -1,0 +1,79 @@
+.contact-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact-area-container {
+    text-align: center;
+    height: 70vh; /* Viewport height, the header is now fixed. */
+
+    background: linear-gradient(#f9f9f9, #fff);
+
+    &:before {
+        content: '\200B';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em; /* Adjusts for spacing. */
+    }
+
+    .contact-area-container-centered {
+        width: 100%;
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+}
+
+.contact-button-container {
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    margin: 0 5px;
+
+    &:hover {
+        background-color: #dedede;
+    }
+
+    &.first {
+        margin-bottom: 14px;
+    }
+
+    position: relative;
+
+    width: 240px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #ECECEC;
+}
+
+.contact-button-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 2; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.contact-button-img {
+    width: 36px;
+}
+
+.contact-button-text {
+    width: 70%;
+}

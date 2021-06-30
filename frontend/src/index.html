@@ -2,12 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Slate</title>
+  <title>Simon van Noort - A Software Engineering student from the Netherlands</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css"> /* This styling was included to style the loader-overlay. */
+    .loader-overlay-container {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+
+      text-align: center;
+
+      background-color: white;
+
+      transition: opacity 0.4s ease-in-out;
+      -moz-transition: opacity 0.4s ease-in-out;
+      -webkit-transition: opacity 0.4s ease-in-out;
+    }
+
+    .loader-overlay-container.hidden {
+      opacity: 0;
+    }
+
+    .loader-overlay-container:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
+
+    .loader-overlay-content {
+        width: 195px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <div class="loader-overlay-container">
+    <div class="loader-overlay-content">
+        <img class="loader-overlay-icon" src="assets/img/loading-icon.svg">
+    </div>
+  </div>
 </body>
 </html>

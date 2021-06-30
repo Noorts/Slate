@@ -1,27 +1,32 @@
 .site-wrapper {
-    display: flex;
-    justify-content: center;
-    background: #F4F6F8;
+    // width: 100%; // Re-enable this to reveal the scrollbar.
 
-    height: 100%;
-    width: 100%;
+    position: fixed;
     top: 0;
     bottom: 0;
-    position: fixed;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    background: var(--default-background-color); // #F4F6F8
 
     overflow-y: scroll;
     overflow-x: hidden;
+
+    scroll-behavior: smooth;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    &.disable-scroll {
+        overflow-y: hidden;
+    }
 }
 
-.content-container {
-    width: 800px;
-    background: none;
-    height: auto;
-}
-
-@media only screen and (min-width: 768px) {
-    .content-container{
-        width: 800px;
-        background: none;
+@media only screen and (min-width: 1120px) {
+    .site-wrapper {
+        overflow-y: scroll !important;
     }
 }

@@ -1,0 +1,18 @@
+<div class="card" #card>
+    <div class="card-info-container">
+        <a [href]="model.sourceUrl" alt="Project Source Image" target="_blank" rel="noopener noreferrer">
+            <img class="card-info-source-image" [src]="model.sourceImageUrl">
+        </a>
+    </div>
+    <div class="card-header-container">
+        <img class="card-item card-image" [src]="model.projectImageUrl">
+        <a class="card-header-link" [href]="model.sourceUrl"
+           alt="Project Source Image" target="_blank" rel="noopener noreferrer">
+            <span class="card-item card-header">{{ model.header }}</span>
+        </a>
+    </div>
+    <span class="card-item card-description text-small-base" #description>{{ model.description }}</span>
+    <div class="card-read-more-container" #readMoreContainer>
+        <span class="card-read-more-text" (click)="revealFullDescription()">Read More</span>
+    </div>
+</div>
