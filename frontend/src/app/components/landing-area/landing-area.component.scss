@@ -5,6 +5,20 @@
     font-weight: 700;
 }
 
+.landing-area-content-left {
+    width: 554px;
+    display: inline-block;
+
+    text-align: right;
+}
+
+.landing-area-content-right {
+    width: 554px;
+    display: inline-block;
+
+    text-align: left;
+}
+
 .landing-area-container {
     height: 100vh; /* Viewport height, the header is now fixed. */
 
@@ -21,7 +35,7 @@
     }
 
     .landing-area-container-centered {
-        max-width: 554px;
+        max-width: 1108px;
         display: inline-block;
 
         vertical-align: middle;

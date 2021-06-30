@@ -1,8 +1,13 @@
 <div class="landing-area-container">
     <div class="landing-area-container-centered">
-        <p class="text-base">{{ landingAreaContent.introText }}</p>
-        <h1 class="home-title">{{ landingAreaContent.name }}</h1>
-        <p class="text-base">{{ landingAreaContent.baseText }}</p>
+        <div class="landing-area-content-left">
+            <app-canvas-object></app-canvas-object>
+        </div>
+        <div class="landing-area-content-right">
+            <p class="text-base">{{ landingAreaContent.introText }}</p>
+            <h1 class="home-title">{{ landingAreaContent.name }}</h1>
+            <p class="text-base">{{ landingAreaContent.baseText }}</p>
+        </div>
         <div class="arrow-container">
             <a href="#Experience">
                 <i class="down-arrow"></i>
