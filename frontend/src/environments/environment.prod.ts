@@ -1,4 +1,4 @@
 export const environment = {
-  strapiApiUrl: 'http://localhost:1337',
+  strapiApiUrl: 'https://strapi.noorts.me',
   production: true
 };
