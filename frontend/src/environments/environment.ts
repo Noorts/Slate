@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  strapiApiUrl: 'http://localhost:1337',
+  strapiApiUrl: 'http://127.0.0.1:1337',
   production: false
 };
 
