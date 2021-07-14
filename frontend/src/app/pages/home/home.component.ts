@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
         /* Timeout added because the DOM needs to be updated with the content blocks.
         * This should be done dynamically, maybe using a lifecycle hook. */
         this.scrollToFragmentAnchor();
-      }, 400);
+      }, 100);
     });
   }
 
