@@ -1,7 +1,7 @@
 /* Most of the card its styling is contained in the css of the card component. */
 
 .card {
-    max-width: 612px;
+    max-width: 804px;
 
     padding: 18px 22px;
 }
@@ -21,6 +21,12 @@
 
     .card-header-link {
         text-decoration: none;
+        border: none;
+
+        // transition: opacity .2s ease-in-out,border .2s ease-in-out;
+        &:hover {
+            opacity: 0.75;
+        }
     }
 }
 
@@ -33,11 +39,24 @@
 
     vertical-align: middle;
 
-    .card-info-source-image {
-        height: 100%;
+    .card-info-source-image-link {
+        border: none;
 
-        vertical-align: middle;
+        .card-info-source-image {
+            height: 100%;
 
-        margin-right: 12px;
+            vertical-align: middle;
+
+            margin-right: 12px;
+
+            filter: invert(100%);
+
+            // transition: opacity .2s ease-in-out,border .2s ease-in-out;
+            &:hover {
+                opacity: 0.75;
+
+            }
+        }
     }
+
 }

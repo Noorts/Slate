@@ -1,6 +1,6 @@
 <div class="card" #card>
     <div class="card-info-container">
-        <a [href]="model.sourceUrl" alt="Project Source Image" target="_blank" rel="noopener noreferrer">
+        <a class="card-info-source-image-link" [href]="model.sourceUrl" alt="Project Source Image" target="_blank" rel="noopener noreferrer">
             <img class="card-info-source-image" [src]="model.sourceImageUrl">
         </a>
     </div>
@@ -11,7 +11,7 @@
             <span class="card-item card-header">{{ model.header }}</span>
         </a>
     </div>
-    <span class="card-item card-description text-small-base" #description>{{ model.description }}</span>
+    <span class="card-item card-description text-small-base" [innerHTML]="model.description" #description></span>
     <div class="card-read-more-container" #readMoreContainer>
         <span class="card-read-more-text" (click)="revealFullDescription()">Read More</span>
     </div>
