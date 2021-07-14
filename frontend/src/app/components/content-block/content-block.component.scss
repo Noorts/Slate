@@ -1,11 +1,10 @@
 .content-block-container {
     width: 100%;
-
-    padding-bottom: 60px;
 }
 
 .content-block-content-container {
-    max-width: 654px;
+    max-width: 880px;
+    width: 100vw;
 
     margin: 60px auto 0 auto;
 
@@ -13,7 +12,12 @@
 }
 
 .content-block-title {
-    margin-bottom: 58px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    text-align: left;
+
+    font-size: 1.75em;
+    font-weight: 400;
 }
 
 .content-block-divider {
@@ -32,21 +36,13 @@
 
     display: inline-block;
 
-    border-left: 1px solid #F2F2F2;
+    border-left: 1px solid #4a4a4a;
   }
 
 .vertical-line-with-status {
     margin-bottom: 10px;
 }
 
-#section-Experience {
-    background: linear-gradient(#f9f9f9, #fff);
-}
-
-#section-Education {
-    background-color: #FFFFFF;
-}
-
-#section-Projects {
-    background-color: #FFFFFF;
+.nav-anchor {
+    border: none;
 }

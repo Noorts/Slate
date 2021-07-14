@@ -1,11 +1,10 @@
 /* See the child components info card and project card for their specific additional styling rules. */
 
 .card {
-    width: 80vw;
     min-height: 220px;
     max-height: 280px;
 
-    margin: 16px auto 18px auto;
+    margin: 16px 20px 18px 20px;
 
     // Used to negate the small additional margin that is on the left by default
     position: relative;
@@ -15,8 +14,9 @@
     flex-direction: column;
     text-align: left;
 
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    background-color: #f2f2f2;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.1);
+    border-radius: 6px;
+    background-color: #242424;
 
     transition: max-height 1s ease-in;
 
@@ -32,13 +32,15 @@
 
 .card-header {
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 500;
+    color: #E5E7EB;
 }
 
 .card-description {
     margin-top: 12px;
     white-space: pre-wrap;
-    font-size: 0.95em;
+    font-size: 0.85em;
+    color: #BABCBD;
 
     // See the following link for the line clamp trick: https://css-tricks.com/almanac/properties/l/line-clamp/
     display: -webkit-box;
@@ -65,16 +67,18 @@
 }
 
 .card-read-more-text {
-    padding: 0px 3px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 1px 4px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 
     font-size: 0.8em;
     font-weight: 400;
-    color: #404040;
+    color: #828282;
 
     cursor: pointer;
 
+    // transition: color .2s ease-in-out,border .2s ease-in-out;
+
     &:hover {
-        opacity: 0.75;
+        color: #a4a4a4;
     }
 }
