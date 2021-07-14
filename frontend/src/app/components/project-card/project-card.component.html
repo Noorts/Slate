@@ -8,7 +8,7 @@
         <img class="card-item card-image" *ngIf="model.cardImage" [src]="strapiUrl + model.cardImage.url">
         <a class="card-header-link" [href]="model.repositoryUrl"
            alt="Project Source Image" target="_blank" rel="noopener noreferrer">
-            <span class="card-item card-header">{{ model.header }}</span>
+            <span class="card-header">{{ model.header }}</span>
         </a>
     </div>
     <span class="card-item card-text text-small-base" [innerHTML]="model.description" #description></span>
