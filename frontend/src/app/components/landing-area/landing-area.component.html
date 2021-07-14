@@ -1,7 +1,6 @@
 <div class="landing-area-container">
     <div class="landing-area-container-centered">
-        <img class="home-photo" src="assets/img/photo.png">
-        <p class="text-base">{{ landingAreaContent.introText }}</p>
+        <img class="home-photo" [src]="strapiUrl + landingAreaContent.landingPhoto.url">
         <h1 class="home-title">{{ landingAreaContent.name }}</h1>
         <p class="text-base landing-area-base-text" [innerHTML]="landingAreaContent.baseText"></p>
     </div>

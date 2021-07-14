@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PageLoaderService } from '@services/page-loader.service';
 import { StrapiService } from '@services/strapi.service';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'app-landing-area',
@@ -8,10 +9,11 @@ import { StrapiService } from '@services/strapi.service';
   styleUrls: ['./landing-area.component.scss']
 })
 export class LandingAreaComponent implements OnInit {
+  strapiUrl = environment.strapiApiUrl;
   public landingAreaContent = {
-    introText: '',
     name: '',
-    baseText: ''
+    baseText: '',
+    landingPhoto: { url: ''}
   };
 
   constructor(private strapiService: StrapiService, private pageLoaderService: PageLoaderService) { }

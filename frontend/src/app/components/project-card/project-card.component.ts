@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CardComponent } from '@components/card/card.component';
 import { ProjectCard } from '@models/ProjectCard';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'app-project-card',
@@ -10,9 +11,9 @@ import { ProjectCard } from '@models/ProjectCard';
 export class ProjectCardComponent extends CardComponent {
 
   @Input() model?: ProjectCard = new ProjectCard();
+  strapiUrl = environment.strapiApiUrl;
 
   constructor() {
-    /* See the CardComponent for the logic behind the read more functionality. */
     super();
   }
 }

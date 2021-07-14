@@ -16,25 +16,27 @@
       "type": "string",
       "required": true
     },
-    "projectImageUrl": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
     },
-    "sourceImageUrl": {
-      "type": "string",
-      "required": true
-    },
-    "sourceUrl": {
+    "repositoryUrl": {
       "type": "string",
       "required": true
     },
     "infoContent": {
       "model": "content-block",
       "via": "projectCards"
+    },
+    "cardImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
     }
   }
 }

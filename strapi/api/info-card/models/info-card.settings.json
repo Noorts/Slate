@@ -26,7 +26,7 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "statusContent": {
       "type": "string"
@@ -35,9 +35,19 @@
       "model": "content-block",
       "via": "infoCards"
     },
-    "cardImageUrl": {
-      "type": "string",
+    "introText": {
+      "type": "text",
       "required": true
+    },
+    "orgImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
