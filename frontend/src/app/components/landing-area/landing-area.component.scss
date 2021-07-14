@@ -11,8 +11,6 @@
 }
 
 .landing-area-container {
-    // height: 100vh; /* Viewport height, the header is now fixed. */
-
     margin: 30px 20px 0px 20px;
 
     text-align: center;
@@ -28,36 +26,9 @@
     }
 }
 
-.arrow-container {
-    margin-top: 10vh;
-    text-align: center;
-
-    .down-arrow {
-        border: solid black;
-        border-width: 0 5px 5px 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-
-        transition: opacity .2s ease-in-out,transform .2s ease-in-out;
-
-        &:hover {
-            transform: rotate(45deg) translateY(3px) translateX(3px);
-        }
-    }
-}
-
 .landing-area-base-text {
     font-size: 1.05em;
     color: #D8DADF;
 
     white-space: pre-wrap;
-}
-
-.landing-area-bottom-border {
-    width: 80%;
-    max-width: 800px;
-
-    margin: auto;
 }

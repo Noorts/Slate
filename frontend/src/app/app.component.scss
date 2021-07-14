@@ -1,5 +1,5 @@
 .site-wrapper {
-    // width: 100%; // Re-enable this to reveal the scrollbar.
+    width: 100%; // Enable to reveal the scrollbar.
 
     position: fixed;
     top: 0;
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
 
-    background: var(--default-background-color); // #F4F6F8
+    background: var(--default-background-color);
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -18,15 +18,5 @@
 
     &.hidden {
         visibility: hidden;
-    }
-
-    &.disable-scroll {
-        overflow-y: hidden;
-    }
-}
-
-@media only screen and (min-width: 1120px) {
-    .site-wrapper {
-        overflow-y: scroll !important;
     }
 }

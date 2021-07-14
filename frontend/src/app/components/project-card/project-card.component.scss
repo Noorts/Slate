@@ -25,7 +25,6 @@
         text-decoration: none;
         border: none;
 
-        // transition: opacity .2s ease-in-out,border .2s ease-in-out;
         &:hover {
             opacity: 0.75;
         }
@@ -47,16 +46,14 @@
         .card-info-source-image {
             height: 100%;
 
-            vertical-align: middle;
-
             margin-right: 12px;
+
+            vertical-align: middle;
 
             filter: invert(100%);
 
-            // transition: opacity .2s ease-in-out,border .2s ease-in-out;
             &:hover {
                 opacity: 0.75;
-
             }
         }
     }

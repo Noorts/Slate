@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
 
   constructor(private strapiService: StrapiService, private route: ActivatedRoute,
-    private pageLoaderService: PageLoaderService) { }
+              private pageLoaderService: PageLoaderService) { }
 
   ngOnInit(): void {
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
