@@ -7,7 +7,7 @@
     margin: 22.8px 0px 30.8px;
 
     font-size: 1.7em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .landing-area-container {
@@ -18,14 +18,6 @@
     text-align: center;
 
     background-color: var(--alternate-background-color);
-
-    // &:before {
-    //     content: '\200B';
-    //     display: inline-block;
-    //     height: 100%;
-    //     vertical-align: middle;
-    //     margin-right: -0.25em; /* Adjusts for spacing. */
-    // }
 
     .landing-area-container-centered {
         max-width: 800px;

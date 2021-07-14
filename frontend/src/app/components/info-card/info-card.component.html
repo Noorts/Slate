@@ -3,7 +3,7 @@
         <span class="card-status-content text-small-base">{{ model.statusContent }}</span>
     </div>
     <div class="card-header-container">
-        <img class="card-image" [src]="strapiUrl + model.orgImage.url">
+        <img class="card-image" *ngIf="model.orgImage" [src]="strapiUrl + model.orgImage.url">
         <div class="card-header-text-container">
             <span class="card-item card-header">{{ model.header }}</span>
             <span class="card-item card-org text-small-base">{{ model.organisation }}</span>
