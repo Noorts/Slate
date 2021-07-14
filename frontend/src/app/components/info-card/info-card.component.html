@@ -2,8 +2,13 @@
     <div class="card-status" *ngIf="model.statusContent">
         <span class="card-status-content text-small-base">{{ model.statusContent }}</span>
     </div>
-    <span class="card-item card-header">{{ model.header }}</span>
-    <span class="card-item card-org text-small-base">{{ model.organisation }}</span>
+    <div class="card-header-container">
+        <img class="card-image" [src]="model.cardImageUrl">
+        <div class="card-header-text-container">
+            <span class="card-item card-header">{{ model.header }}</span>
+            <span class="card-item card-org text-small-base">{{ model.organisation }}</span>
+        </div>
+    </div>
     <span class="card-item card-date text-small-base">{{ model.dateRange }}</span>
     <span class="card-item card-description text-small-base" #description>{{ model.description }}</span>
     <div class="card-read-more-container" #readMoreContainer>
