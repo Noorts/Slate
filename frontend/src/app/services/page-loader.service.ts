@@ -35,10 +35,5 @@ export class PageLoaderService {
     }
 
     document.querySelector('.site-wrapper').classList.remove('hidden');
-    document.querySelector('.loader-overlay-container').classList.add('hidden');
-
-    setTimeout(() => {
-      document.querySelector('.loader-overlay-container').remove();
-      }, 400); // The delay was added so that the animations sync up nicely.
   }
 }

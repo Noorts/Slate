@@ -1,13 +1,10 @@
 .contact-title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
 }
 
 .contact-area-container {
     text-align: center;
-    height: 70vh; /* Viewport height, the header is now fixed. */
-
-    background: linear-gradient(#f9f9f9, #fff);
 
     &:before {
         content: '\200B';
@@ -34,10 +31,10 @@
 }
 
 .contact-button {
-    margin: 0 5px;
+    margin: 0 6px;
 
     &:hover {
-        background-color: #dedede;
+        background-color: #323232;
     }
 
     &.first {
@@ -46,15 +43,16 @@
 
     position: relative;
 
-    width: 240px;
+    width: 90vw;
+    max-width: 240px;
     height: 60px;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    background-color: #ECECEC;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.1);
+    background-color: #242424;
 }
 
 .contact-button-link {
@@ -71,6 +69,7 @@
 }
 
 .contact-button-img {
+    filter: invert(100%);
     width: 36px;
 }
 

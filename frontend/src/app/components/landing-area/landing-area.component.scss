@@ -1,60 +1,34 @@
+.home-photo {
+    width: 120px;
+    height: 120px;
+}
+
 .home-title {
     margin: 22.8px 0px 30.8px;
 
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 1.7em;
+    font-weight: 600;
 }
 
 .landing-area-container {
-    height: 100vh; /* Viewport height, the header is now fixed. */
+    margin: 30px 20px 0px 20px;
 
     text-align: center;
 
     background-color: var(--alternate-background-color);
 
-    &:before {
-        content: '\200B';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -0.25em; /* Adjusts for spacing. */
-    }
-
     .landing-area-container-centered {
-        max-width: 554px;
+        max-width: 800px;
         display: inline-block;
 
         vertical-align: middle;
-    }
-}
-
-.arrow-container {
-    margin-top: 10vh;
-    text-align: center;
-
-    .down-arrow {
-        border: solid black;
-        border-width: 0 5px 5px 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-
-        transition: opacity .2s ease-in-out,transform .2s ease-in-out;
-
-        &:hover {
-            transform: rotate(45deg) translateY(3px) translateX(3px);
-        }
+        text-align: left;
     }
 }
 
 .landing-area-base-text {
+    font-size: 1.05em;
+    color: #D8DADF;
+
     white-space: pre-wrap;
-}
-
-.landing-area-bottom-border {
-    width: 80%;
-    max-width: 800px;
-
-    margin: auto;
 }

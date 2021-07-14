@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "introText": {
-      "type": "string",
-      "required": true
-    },
     "name": {
       "type": "string",
       "required": true
@@ -23,6 +19,16 @@
     "baseText": {
       "type": "text",
       "required": true
+    },
+    "landingPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

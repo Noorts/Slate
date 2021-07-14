@@ -2,20 +2,24 @@ import { Card } from './Card';
 
 class ProjectCard implements Card {
     public header: string;
-    public projectImageUrl: string;
     public description: string;
-    public sourceImageUrl: string;
-    public sourceUrl: string;
+    public repositoryUrl: string;
+    public cardImage: {
+        url: string
+    };
 
     constructor(
-        header: string = '', projectImageUrl: string = '', description: string = '',
-        sourceImageUrl: string = '', sourceUrl: string = ''
+        header: string = '', description: string = '', repositoryUrl: string = '',
+        cardImage: {
+            url: string
+        } = {
+                url: ''
+            }
         ) {
             this.header = header;
-            this.projectImageUrl = projectImageUrl;
             this.description = description;
-            this.sourceImageUrl = sourceImageUrl;
-            this.sourceUrl = sourceUrl;
+            this.repositoryUrl = repositoryUrl;
+            this.cardImage = cardImage;
         }
 }
 

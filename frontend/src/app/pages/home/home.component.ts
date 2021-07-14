@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
 
   constructor(private strapiService: StrapiService, private route: ActivatedRoute,
-    private pageLoaderService: PageLoaderService) { }
+              private pageLoaderService: PageLoaderService) { }
 
   ngOnInit(): void {
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
         /* Timeout added because the DOM needs to be updated with the content blocks.
         * This should be done dynamically, maybe using a lifecycle hook. */
         this.scrollToFragmentAnchor();
-      }, 400);
+      }, 100);
     });
   }
 

@@ -1,35 +1,36 @@
 :root {
-    --default-background-color: #F5F5F5; // #F8F9FB
-    --default-text-color: #333; // #23272a, #0D131E, #4a4a4a, #353535
+    --default-background-color: #181919;
+    --default-text-color: #E1E3E7;
 
-    --alternate-background-color: #FFFFFF;
-
-    --header-background-color: #242424;
-    --header-text-color: #F5F5F5;
-
-    --sidebar-background-color: #F5F5F5;
-    --sidebar-text-color: #242424;
+    --alternate-background-color: #181919;
 }
 
 /* You can add global styles to this file, and also import other style files */
 html {
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
     color: var(--default-text-color);
 }
 
 a {
     text-decoration: none;
-    color: var(--default-text-color);
+    border-bottom: 1px dashed #BDBDBD;
+    color: #BDBDBD;
+
+    &:hover {
+        border-bottom: 1px dashed var(--default-text-color);
+        color: var(--default-text-color);
+    }
 }
 
 .text-header {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
 }
 
 .text-base {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 400;
+    line-height: 1.4em;
 }
 
 .text-small-base {
