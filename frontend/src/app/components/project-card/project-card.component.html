@@ -11,8 +11,5 @@
             <span class="card-item card-header">{{ model.header }}</span>
         </a>
     </div>
-    <span class="card-item card-description text-small-base" [innerHTML]="model.description" #description></span>
-    <div class="card-read-more-container" #readMoreContainer>
-        <span class="card-read-more-text" (click)="revealFullDescription()">Read More</span>
-    </div>
+    <span class="card-item card-text text-small-base" [innerHTML]="model.description" #description></span>
 </div>

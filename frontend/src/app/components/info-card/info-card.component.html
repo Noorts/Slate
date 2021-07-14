@@ -10,8 +10,9 @@
         </div>
     </div>
     <span class="card-item card-date text-small-base">{{ model.dateRange }}</span>
-    <span class="card-item card-description text-small-base" #description>{{ model.description }}</span>
-    <div class="card-read-more-container" #readMoreContainer>
+    <span class="card-item card-text text-small-base">{{ model.introText }}</span>
+    <span class="card-item card-description card-text text-small-base" #description>{{ model.description }}</span>
+    <div class="card-read-more-container" #readMoreContainer *ngIf="model.description">
         <span class="card-read-more-text" (click)="revealFullDescription()">Read More</span>
     </div>
 </div>

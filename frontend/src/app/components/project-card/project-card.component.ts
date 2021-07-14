@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardComponent } from '@components/card/card.component';
 import { ProjectCard } from '@models/ProjectCard';
 
@@ -7,7 +7,7 @@ import { ProjectCard } from '@models/ProjectCard';
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.scss', '../card/card.component.scss']
 })
-export class ProjectCardComponent extends CardComponent implements AfterViewInit {
+export class ProjectCardComponent extends CardComponent {
 
   @Input() model?: ProjectCard = new ProjectCard();
 

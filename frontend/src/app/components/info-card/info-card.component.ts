@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardComponent } from '@components/card/card.component';
 import { InfoCard } from 'src/app/models/InfoCard';
 
@@ -7,7 +7,7 @@ import { InfoCard } from 'src/app/models/InfoCard';
   templateUrl: './info-card.component.html',
   styleUrls: ['./info-card.component.scss', '../card/card.component.scss']
 })
-export class InfoCardComponent extends CardComponent implements AfterViewInit {
+export class InfoCardComponent extends CardComponent {
 
   @Input() model?: InfoCard = new InfoCard();
 
