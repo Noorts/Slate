@@ -34,6 +34,10 @@
     "infoContent": {
       "model": "content-block",
       "via": "infoCards"
+    },
+    "cardImageUrl": {
+      "type": "string",
+      "required": true
     }
   }
 }
