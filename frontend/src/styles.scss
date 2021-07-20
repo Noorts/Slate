@@ -7,8 +7,21 @@
 
 /* You can add global styles to this file, and also import other style files */
 html {
+    height: 100vh;
+
     font-family: Inter, Arial, sans-serif;
     color: var(--default-text-color);
+    background-color: var(--default-background-color);
+}
+
+body {
+    height: 100vh;
+
+    /* Prevents overscrolling/rubberbanding on iOS. */
+    overflow: hidden;
+
+    /* Prevents the font-size from adjusting when rotating the display from portait to landscape on iOS. */
+    -webkit-text-size-adjust: none;
 }
 
 a {
@@ -22,11 +35,6 @@ a {
     }
 }
 
-.text-header {
-    font-size: 28px;
-    font-weight: 700;
-}
-
 .text-base {
     font-size: 1.1em;
     font-weight: 400;
@@ -37,3 +45,13 @@ a {
     font-size: 0.95em;
     font-weight: 400;
 }
+
+/* Fixes 100vh bug when the address bar is hidden in Safari.
+ * The 100vh on the html and body are required.
+ * For more see: https://github.com/postcss/postcss-100vh-fix */
+@supports (-webkit-touch-callout: none) {
+    body {
+      /* Fix for Safari */
+      height: -webkit-fill-available;
+    }
+  }
