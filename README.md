@@ -11,18 +11,20 @@
 <p align="center">
   <a href="#info">Info</a> •
   <a href="#roadmap">Roadmap</a> •
+    <a href="#acknowledgements">Acknowledgements</a> •
   <a href="#license">License</a>
 </p>
 
 ## Info
-Slate is my portfolio site. The first version of my portfolio is now live over on [noorts.me](https://noorts.me). An [Angular](https://angular.io/) frontend and a [Strapi](https://strapi.io/) CMS were used to build it. Changes to the website its design are planned as it is currently still quite barebones.
+Slate is my portfolio site. The second version of my portfolio is now live over on [https://noorts.me](https://noorts.me). An [Angular](https://angular.io/) frontend and a [Strapi](https://strapi.io/) CMS were used to build it.
 
 ## Roadmap
-* Add 3D animation to landing area
 * Add image functionality to project cards
 * Implement full CI/CD
 * Use different technologies (Next.js) so that the website can be generated to static files and the live Strapi instance is no longer necessary
-* Revamp website to a compact design
+
+## Acknowledgements
+My portfolio its design has been heavily inspired by [Hector Simpson](https://hector.me/). Thanks to him for the inspiration.
 
 ## License
 Slate is licensed under the [MIT license](LICENSE.md).
