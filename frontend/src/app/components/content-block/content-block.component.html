@@ -5,7 +5,7 @@
         <div *ngFor="let card of model.cards; index as i">
             <div class="vertical-line" *ngIf="i != 0"
                 [ngClass]="{'vertical-line-with-status':
-                model.contentType === 'infoCards' && $any(card).statusContent !== ''}">
+                model.contentType === 'infoCards' && $any(card).statusContent?.length > 0}">
             </div>
             <app-info-card *ngIf="model.contentType === 'infoCards'" [model]="card" ></app-info-card>
             <app-project-card *ngIf="model.contentType === 'projectCards'" [model]="card" ></app-project-card>

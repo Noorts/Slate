@@ -1,5 +1,5 @@
 <div class="card" #card>
-    <div class="card-status" *ngIf="model.statusContent">
+    <div class="card-status" *ngIf="model.statusContent?.length > 0">
         <span class="card-status-content text-small-base">{{ model.statusContent }}</span>
     </div>
     <div class="card-header-container">
