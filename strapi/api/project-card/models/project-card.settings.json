@@ -37,6 +37,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "order": {
+      "type": "integer",
+      "required": true
     }
   }
 }

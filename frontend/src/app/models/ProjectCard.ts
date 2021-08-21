@@ -7,9 +7,10 @@ class ProjectCard implements Card {
     public cardImage: {
         url: string
     };
+    public order: number;
 
     constructor(
-        header: string = '', description: string = '', repositoryUrl: string = '',
+        header: string = '', description: string = '', repositoryUrl: string = '', order: number = null,
         cardImage: {
             url: string
         } = {
@@ -20,6 +21,7 @@ class ProjectCard implements Card {
             this.description = description;
             this.repositoryUrl = repositoryUrl;
             this.cardImage = cardImage;
+            this.order = order;
         }
 }
 

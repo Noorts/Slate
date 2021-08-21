@@ -64,6 +64,10 @@ export class HomeComponent implements OnInit {
         listOfCards.push(curObj);
       }
 
+      /* Sort the cards by the order property. This means that the order of the cards can be set from the CMS manually.
+       * This has to be done manually as there currently is no native feature provided by Strapi to do this. */
+      listOfCards.sort((a, b) => b.order - a.order);
+
       contentBlocks.push(Object.assign(new ContentBlock(), {
         blockHeader: contentBlock.blockHeader, contentType: contentBlock.contentType, cards: listOfCards
       }));

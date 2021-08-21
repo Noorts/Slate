@@ -10,9 +10,10 @@ class InfoCard implements Card {
     public orgImage: {
         url: string
     };
+    public order: number;
 
     constructor(statusContent: string = '', header: string = '', organisation: string = '', dateRange: string = '',
-                introText: string = '', description: string = '',
+                introText: string = '', description: string = '', order: number = null,
                 orgImage: {
                     url: string
                 } = { url: '' }
@@ -24,6 +25,7 @@ class InfoCard implements Card {
             this.introText = introText;
             this.description = description;
             this.orgImage = orgImage;
+            this.order = order;
         }
 }
 
