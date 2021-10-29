@@ -14,6 +14,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ContactAreaComponent } from './components/contact-area/contact-area.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardComponent } from './components/card/card.component';
     ContentBlockComponent,
     ProjectCardComponent,
     ContactAreaComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
