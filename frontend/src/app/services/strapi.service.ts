@@ -23,12 +23,20 @@ class StrapiService {
     return this.httpClient.get<any>(`${environment.strapiApiUrl}/content-blocks`);
   }
 
+  private _httpGetContactAreaInfo(): Observable<any> {
+    return this.httpClient.get<any>(`${environment.strapiApiUrl}/contact-area`);
+  }
+
   getLandingAreaInfo(): Observable<any> {
     return this._httpGetLandingAreaInfo();
   }
 
   getAllContentBlocks(): Observable<any> {
     return this._httpGetContentBlocks();
+  }
+
+  getContactAreaInfo(): Observable<any> {
+    return this._httpGetContactAreaInfo();
   }
 }
 

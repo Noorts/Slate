@@ -6,6 +6,7 @@ import { ProjectCard } from '@models/ProjectCard';
 import { StrapiService } from '@services/strapi.service';
 import { ActivatedRoute } from '@angular/router';
 import { PageLoaderService } from '@services/page-loader.service';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +15,16 @@ import { PageLoaderService } from '@services/page-loader.service';
 })
 export class HomeComponent implements OnInit {
   public contentBlocks: ContentBlock[];
+  public fullResumeLink: string;
 
   constructor(private strapiService: StrapiService, private route: ActivatedRoute,
               private pageLoaderService: PageLoaderService) { }
 
   ngOnInit(): void {
+    this.strapiService.getContactAreaInfo().subscribe(getContactAreaInfo => {
+      this.fullResumeLink = `${environment.strapiApiUrl}${getContactAreaInfo.resume.url}`;
+      this.pageLoaderService.updatePageLoaderStatus('contactAreaReady');
+    });
     this.strapiService.getAllContentBlocks().subscribe(rawContentBlocks => {
       this.contentBlocks = this.setupContentBlocks(rawContentBlocks);
 

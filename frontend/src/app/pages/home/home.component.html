@@ -1,7 +1,7 @@
 <div class="home-container">
     <div class="main-content">
         <app-landing-area class="landing-area"></app-landing-area>
-        <app-contact-area></app-contact-area>
+        <app-contact-area [fullResumeLink]="fullResumeLink"></app-contact-area>
         <app-content-block [model]="contentblock"
             *ngFor="let contentblock of contentBlocks">
         </app-content-block>

@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class PageLoaderService {
   public loadingStatus = {
     contentBlocksReady: false,
-    landingAreaReady: false
+    landingAreaReady: false,
+    contactAreaReady: false,
   };
 
   constructor() { }
