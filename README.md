@@ -16,7 +16,7 @@
 </p>
 
 ## Info
-Slate is my portfolio site. The second version of my portfolio is now live over on [https://noorts.me](https://noorts.me). An [Angular](https://angular.io/) frontend and a [Strapi](https://strapi.io/) CMS were used to build it.
+Slate used to be my portfolio site. The second version of my portfolio was live over on https://noorts.me. I took it down on Sat 16/04/2022. An [Angular](https://angular.io/) frontend and a [Strapi](https://strapi.io/) CMS were used to build it.
 
 ## Roadmap
 * Add image functionality to project cards
